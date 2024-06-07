@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ecommerce-project/static/css/main.8271f1db.css",
-    "main.js": "/ecommerce-project/static/js/main.c2663783.js",
+    "main.js": "/ecommerce-project/static/js/main.eb72d4b8.js",
     "static/media/AGAIN by DEKA - How to GAIN Power in Your Practice_.mp4": "/ecommerce-project/static/media/AGAIN by DEKA - How to GAIN Power in Your Practice_.062053506f498fb68e5a.mp4",
     "static/media/Again Device.png": "/ecommerce-project/static/media/Again Device.76ae7edcb0b40a3c5220.png",
     "static/media/again-09.png": "/ecommerce-project/static/media/again-09.55f7d2b2b00dce712746.png",
@@ -29,10 +29,10 @@
     "static/media/fa-v4compatibility.woff2": "/ecommerce-project/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/ecommerce-project/index.html",
     "main.8271f1db.css.map": "/ecommerce-project/static/css/main.8271f1db.css.map",
-    "main.c2663783.js.map": "/ecommerce-project/static/js/main.c2663783.js.map"
+    "main.eb72d4b8.js.map": "/ecommerce-project/static/js/main.eb72d4b8.js.map"
   },
   "entrypoints": [
     "static/css/main.8271f1db.css",
-    "static/js/main.c2663783.js"
+    "static/js/main.eb72d4b8.js"
   ]
 }
