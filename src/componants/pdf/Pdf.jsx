@@ -60,10 +60,10 @@ function Pdf() {
                 <img src={image12} className="img-fluid" alt="..."/>
               </div>
             </div>
-            <button className="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
               <span className="carousel-control-prev-icon bg-dark rounded" aria-hidden="true"></span>
             </button>
-            <button className="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
               <span className="carousel-control-next-icon bg-dark rounded" aria-hidden="true"></span>
             </button>
           </div>   
