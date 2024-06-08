@@ -31,7 +31,7 @@ a{
   height: fit-content;
 }
 .h-87 {
-  height: 87vh;
+  height: calc(100vh - 70px);
 }
 .bg-content { 
   background: linear-gradient(135deg,rgb(0, 0, 0) 0%,rgb(14, 255, 255) 100%);
@@ -42,24 +42,37 @@ a{
 .w-40 { 
   width: 40%;
 }
+.pic-container {
+  height: 70vh;
+}
 
 @media (max-width: 576px){
-  .pic-container {
-    width: 65% !important;
+  .pdf-pic {
+    height: 70vh;
+    width: 100%;
   }
 }
 @media (min-width: 576px){
-  .pic-container {
-    width: 71% !important;
+  .pdf-pic {
+    height: 70vh;
+    width: 100%;
   }
 }
-@media (min-width: 768px){
+@media (min-width: 665px){
+  .pdf-pic {
+    height: 70vh;
+    width: 100%;
+  }
+  .pic-container {
+    width: 100% !important;
+  }
+}
+@media (min-width: 900px){
+  .pdf-pic {
+    height: 70vh;
+    width: 100%;
+  }
   .pic-container {
     width: 50% !important;
-  }
-}
-@media (min-width: 992px){
-  .pic-container {
-    width: 40% !important;
   }
 }

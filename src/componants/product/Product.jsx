@@ -3,7 +3,6 @@ import image1 from '../image/Again Device.png'
 import image2 from '../image/Handpieces series.png'
 import image3 from '../image/deka vid.png'
 import image4 from '../image/again pdf/again-01.png'
-import { motion} from "framer-motion"
 import { useState } from 'react';
 function Product() {
     
@@ -15,13 +14,9 @@ function Product() {
     }
 
     return(
-        <motion.div className={`products bg-content h-content`}
-        initial={{x:"100%"}}
-        animate={{ x:"0%" }}
-        transition={{duration:0.3 , ease:"easeOut"}} 
-        exit={{x:"-100vh"}}
+        <div className={`products bg-content h-content animate__animated animate__fadeInRight`}
         >
-            <div className={`container d-flex flex-column justify-content-between ${moreDetails?"":"h-87"}  text-light py-2`}>
+            <div className={`container d-flex flex-column justify-content-between ${moreDetails?"vh-100":"h-87"}  text-light py-2`}>
                     <div className={`product d-flex flex-grow-1`}>
                         <div className="left d-flex flex-column justify-content-between w-50">
                             <div>
@@ -121,7 +116,7 @@ function Product() {
                         </div>
                     </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 export default Product;

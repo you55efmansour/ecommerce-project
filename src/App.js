@@ -6,14 +6,12 @@ import Video from './componants/video/Video';
 import Pdf from './componants/pdf/Pdf';
 import'./App.css';
 import { Route, Routes, useLocation} from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation()
   return(
     <>
-    <div className="vh-100">
-      <AnimatePresence initial = {false} mode={"wait"}>
+    <div className="overflow-hidden">
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={
               <>
@@ -30,18 +28,17 @@ function App() {
             }/>
             <Route path="pdf" element={
               <>
-                <Navbar direction={"/product"} showIcon = {true}/>
+                <Navbar direction={"/product"} color = {true} showIcon = {true}/>
                     <Pdf/>
               </>
             }/>
             <Route path="video" element={
               <>
-                <Navbar direction={"/product"} showIcon = {true}/>
+                <Navbar direction={"/product"} color = {true} showIcon = {true}/>
                   <Video/>
               </>
             }/>
           </Routes>
-      </AnimatePresence>
     </div>
     </>
   )

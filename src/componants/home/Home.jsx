@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import image1 from '../image/Again Device.png';
-import { motion } from "framer-motion"
+
 function Home() {
     return(
         <div className='overflow-hidden'> 
@@ -9,15 +9,9 @@ function Home() {
                     PRO SYSTEMS
                 </div>
             </div>
-            <motion.div
-                initial={{x:"100%"}}
-                animate={{ x:"0%" }}
-                transition={{duration:0.3 , ease:"easeOut"}} 
-                exit={{x:"-100vh"}}
-                className="container h-content mw-100"
-            >
+            <div className="container h-content mw-100 animate__animated animate__fadeInRight">
                 <div className="row">
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -26,7 +20,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -35,7 +29,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -44,7 +38,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -53,7 +47,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -62,7 +56,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -71,7 +65,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -80,7 +74,7 @@ function Home() {
                             </div>
                         </div>
                     </Link>
-                    <Link to={"Product"} className="col-lg-3 col-md-6 col-12 p-0">
+                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
                         <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
                             <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
                             <div className="overlay d-flex flex-column justify-content-center align-items-center">
@@ -90,7 +84,7 @@ function Home() {
                         </div>
                     </Link>
                 </div>
-            </motion.div>
+            </div>
         </div>
     )
 }
