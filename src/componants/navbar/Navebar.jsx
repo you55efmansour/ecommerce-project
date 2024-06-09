@@ -1,24 +1,35 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import logo from '../image/logo.png'
+import data from '../.././data/products.json'
 function Navbar(prop) {
-    const{showIcon} = prop
-    const{direction} = prop
-    const{color} = prop
+    let {products} = data
+    const{showIcon ,direction , showColor} = prop
+    let {id , color} =  useParams()
+    const myProduct = (product)=>{
+        let mainProduct = product.find(prod => prod.id === +id)
+        if (mainProduct) {
+            return(
+                <div className='fw-bold fs-4 text-light'>{mainProduct.title}</div>
+            )
+        }
+    }
 
     return(
-            <div className={`h-nav w-100 ${color?"bg-info":""}`}>
-                <div className="container align-items-center row">
+            <div className={`h-nav w-100 ${showColor?`bg-${color}`:""}`}>
+                <div className="container h-nav w-100 m-0 align-items-center row">
                     {showIcon &&
                     <div className='col-1 d-flex justify-content-center'>
-                        <Link className='back-button d-flex align-items-center' to={direction}>
-                            <i className={`fa-solid ${color?"text-light":"text-primary"}  fs-3 fa-angle-left`}></i>
+                        <Link className='back-button d-flex align-items-center' to={`${color?`${direction}/${id}`:`${direction}`}`}>
+                            <i className={`fa-solid ${showColor?"text-light":"text-primary"}  fs-3 fa-angle-left`}></i>
                         </Link>
                     </div>
                     }
-                    <div className="container col-11 d-flex align-items-center justify-content-center">
-                        <Link to={"/"} className="navbar-brand" >
-                            <img className='logo' src={logo} alt="" />
-                        </Link>
+                    <div className={`container h-100 ${showIcon?"col-11":"col-12"} d-flex align-items-center justify-content-center`}>
+                        {
+                            color?myProduct(products):<Link to={"/"} className="navbar-brand" >
+                                    <img className='logo' src={logo} alt="" />
+                                    </Link>
+                        }
                     </div>
 
                 </div>

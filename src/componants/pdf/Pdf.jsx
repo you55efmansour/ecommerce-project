@@ -1,18 +1,10 @@
 import { useRef, useEffect } from 'react';
-import image1 from '../image/again pdf/again-01.png'
-import image2 from '../image/again pdf/again-02.png'
-import image3 from '../image/again pdf/again-03.png'
-import image4 from '../image/again pdf/again-04.png'
-import image5 from '../image/again pdf/again-05.png'
-import image6 from '../image/again pdf/again-06.png'
-import image7 from '../image/again pdf/again-07.png'
-import image8 from '../image/again pdf/again-08.png'
-import image9 from '../image/again pdf/again-09.png'
-import image10 from '../image/again pdf/again-10.png'
-import image11 from '../image/again pdf/again-11.png'
-import image12 from '../image/again pdf/again-12.png'
+import data from '../../data/products.json'
+import { useParams } from 'react-router-dom';
 
 function Pdf() {
+  let {products} = data
+  let {id , color} =  useParams()
     const carouselRef = useRef();
     useEffect(() => {
       const handleTouchStart = (e) => {
@@ -54,47 +46,23 @@ function Pdf() {
       carouselRef.current.querySelector('.carousel-control-prev').click();
     };
     
+    const myProduct = (product)=>{
+      let mainProduct = product.find(prod => prod.id === +id)
+      if (mainProduct) {
+        return(
+            mainProduct.pdf.map((pdfImage, index) => (
+              <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+                <img src={`${process.env.PUBLIC_URL}${pdfImage}`} className="pdf-pic" alt={`PDF Slide ${index + 1}`} />
+              </div>))
+        )
+      }
+    }
     
     return (
-      <div className='h-content bg-info animate__animated animate__fadeInRight'>
+      <div className={`h-content bg-${color} animate__animated animate__fadeInRight`}>
           <div id="carouselExampleFade" ref={carouselRef} className="carousel slide h-87 d-flex justify-content-center align-items-center" data-bs-ride="carousel"  data-bs-touch={false}>
             <div className="carousel-inner pic-container">
-              <div className="carousel-item active">
-                <img src={image1} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image2} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image3} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image4} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image5} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image6} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image7} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image8} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image9} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image10} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image11} className="pdf-pic" alt="..."/>
-              </div>
-              <div className="carousel-item">
-                <img src={image12} className="pdf-pic" alt="..."/>
-              </div>
+              {myProduct(products)}
             </div>
             <button className="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
               <span className="carousel-control-prev-icon bg-dark rounded" aria-hidden="true"></span>

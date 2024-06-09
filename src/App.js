@@ -20,21 +20,21 @@ function App() {
               </>
             }
             />
-            <Route path="product" element={
+            <Route path="/product/:id" element={
               <>
                 <Navbar direction={"/"} showIcon = {true}/>
                 <Product/>
               </>
             }/>
-            <Route path="pdf" element={
+            <Route path="/pdf/:id/:color" element={
               <>
-                <Navbar direction={"/product"} color = {true} showIcon = {true}/>
+                <Navbar direction={"/product"} showColor = {true} showIcon = {true}/>
                     <Pdf/>
               </>
             }/>
-            <Route path="video" element={
+            <Route path="/video/:id/:color" element={
               <>
-                <Navbar direction={"/product"} color = {true} showIcon = {true}/>
+                <Navbar direction={"/product"} showColor = {true} showIcon = {true}/>
                   <Video/>
               </>
             }/>

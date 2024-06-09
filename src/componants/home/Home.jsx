@@ -1,7 +1,27 @@
 import { Link } from 'react-router-dom';
-import image1 from '../image/Again Device.png';
+import data from '../../data/products.json'
 
 function Home() {
+    let {products} = data
+
+    const renderProducts = (myProducts) =>{
+
+        return(
+            myProducts.map((product , i)=>{
+                return(
+                    <Link to={`/Product/${product.id}`} className={`col-lg-6 col-md-6 col-12 p-0`} key={i}>
+                    <div className={`card rounded-0 bg-${product.color} container border-0 justify-content-center align-items-center`}>
+                        <img src={`${process.env.PUBLIC_URL}${product.img}`} className="card-img w-25 img-fluid" alt="..."/>
+                        <div className="overlay d-flex text-light flex-column justify-content-center align-items-center">
+                            <h5 className="card-title">{product.title}</h5>
+                            <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
+                        </div>
+                    </div>
+                    </Link>
+                )
+            })
+        )
+    }
     return(
         <div className='overflow-hidden'> 
             <div className="row">
@@ -11,78 +31,7 @@ function Home() {
             </div>
             <div className="container h-content mw-100 animate__animated animate__fadeInRight">
                 <div className="row">
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to={"Product"} className="col-lg-6 col-md-6 col-12 p-0">
-                        <div className="card rounded-0 container bg-content border-0 justify-content-center align-items-center">
-                            <img src={image1} className="card-img w-25 img-fluid" alt="..."/>
-                            <div className="overlay d-flex flex-column justify-content-center align-items-center">
-                                <h5 className="card-title">Again device</h5>
-                                <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
-                            </div>
-                        </div>
-                    </Link>
+                    {renderProducts(products)}
                 </div>
             </div>
         </div>

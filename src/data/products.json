@@ -1,0 +1,30 @@
+{
+    "products":[
+        {
+            "id":1,
+            "title":"Again device",
+            "img":"/image/Again Device.png",
+            "pdfCover":"/image/again pdf/again-01.png",
+            "secpdfCover":"/image/Handpieces series.png",
+            "pdfTitle":"Again",
+            "pdf":[
+                "/image/again pdf/again-01.png",
+                "/image/again pdf/again-02.png",
+                "/image/again pdf/again-03.png",
+                "/image/again pdf/again-04.png",
+                "/image/again pdf/again-05.png",
+                "/image/again pdf/again-06.png",
+                "/image/again pdf/again-07.png",
+                "/image/again pdf/again-08.png",
+                "/image/again pdf/again-09.png",
+                "/image/again pdf/again-10.png",
+                "/image/again pdf/again-11.png",
+                "/image/again pdf/again-12.png"
+            ],
+            "color":"primary",
+            "video":"/videos/AGAIN by DEKA - How to GAIN Power in Your Practice_.mp4",
+            "videoPic":"/image/deka vid.png",
+            "videoTitle":"Again video"
+        }
+    ]
+}
