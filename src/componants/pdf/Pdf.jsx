@@ -31,12 +31,18 @@ function Pdf() {
         };
   
         document.addEventListener('touchmove', handleTouchMove);
+  
+        return () => {
+          document.removeEventListener('touchmove', handleTouchMove);
+        };
       };
   
       carouselRef.current.addEventListener('touchstart', handleTouchStart);
   
       return () => {
-        carouselRef.current.removeEventListener('touchstart', handleTouchStart);
+        if (carouselRef.current) {
+          carouselRef.current.removeEventListener('touchstart', handleTouchStart);
+        }
       };
     }, []);
   
@@ -46,7 +52,8 @@ function Pdf() {
   
     const prevSlide = () => {
       carouselRef.current.querySelector('.carousel-control-prev').click();
-    };  
+    };
+    
     
     return (
       <div className='h-content bg-info animate__animated animate__fadeInRight'>
