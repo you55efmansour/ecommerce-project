@@ -1,3 +1,4 @@
+import { useRef, useEffect } from 'react';
 import image1 from '../image/again pdf/again-01.png'
 import image2 from '../image/again pdf/again-02.png'
 import image3 from '../image/again pdf/again-03.png'
@@ -12,9 +13,44 @@ import image11 from '../image/again pdf/again-11.png'
 import image12 from '../image/again pdf/again-12.png'
 
 function Pdf() {
+    const carouselRef = useRef();
+    useEffect(() => {
+      const handleTouchStart = (e) => {
+        const startX = e.touches[0].clientX;
+        
+        const handleTouchMove = (e) => {
+          const difference = startX - e.touches[0].clientX;
+          if (Math.abs(difference) > 50) {
+            if (difference > 0) {
+              nextSlide();
+            } else {
+              prevSlide();
+            }
+            document.removeEventListener('touchmove', handleTouchMove);
+          }
+        };
+  
+        document.addEventListener('touchmove', handleTouchMove);
+      };
+  
+      carouselRef.current.addEventListener('touchstart', handleTouchStart);
+  
+      return () => {
+        carouselRef.current.removeEventListener('touchstart', handleTouchStart);
+      };
+    }, []);
+  
+    const nextSlide = () => {
+      carouselRef.current.querySelector('.carousel-control-next').click();
+    };
+  
+    const prevSlide = () => {
+      carouselRef.current.querySelector('.carousel-control-prev').click();
+    };  
+    
     return (
       <div className='h-content bg-info animate__animated animate__fadeInRight'>
-          <div id="carouselExampleControlsNoTouching" className="carousel slide h-87 d-flex justify-content-center align-items-center" data-bs-interval="5000" data-bs-ride="carousel" data-bs-touch="true">
+          <div id="carouselExampleFade" ref={carouselRef} className="carousel slide h-87 d-flex justify-content-center align-items-center" data-bs-ride="carousel"  data-bs-touch={false}>
             <div className="carousel-inner pic-container">
               <div className="carousel-item active">
                 <img src={image1} className="pdf-pic" alt="..."/>
@@ -53,10 +89,10 @@ function Pdf() {
                 <img src={image12} className="pdf-pic" alt="..."/>
               </div>
             </div>
-            <button className="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <button className="carousel-control-prev d-none d-lg-block" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
               <span className="carousel-control-prev-icon bg-dark rounded" aria-hidden="true"></span>
             </button>
-            <button className="carousel-control-next d-none d-lg-block" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <button className="carousel-control-next d-none d-lg-block" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
               <span className="carousel-control-next-icon bg-dark rounded" aria-hidden="true"></span>
             </button>
           </div>   
