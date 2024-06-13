@@ -48,10 +48,16 @@ a{
     height: 70vh;
     width: 100%;
   }
+  .product-pic{
+    width: 100%;
+  }
 }
 @media (min-width: 576px){
   .pdf-pic {
     height: 70vh;
+    width: 100%;
+  }
+  .product-pic{
     width: 100%;
   }
 }
@@ -72,4 +78,39 @@ a{
   .pic-container {
     width: 50% !important;
   }
+  .product-pic{
+    width: 50%;
+  }
+}
+
+.bg-red {
+  background-color:  #c30000 !important;
+}
+.bg-darkcyan {
+  background-color:  #008074 !important;
+  ;
+}
+.bg-blueviolet {
+  background-color:  #320060 !important;
+  ;
+}
+.bg-darkorange {
+  background-color:  #cf7405 !important;
+  ;
+}
+.bg-darkblue {
+  background-color:  rgb(4, 4, 95) !important;
+  ;
+}
+.bg-darkseagreen {
+  background-color:  darkseagreen !important;
+  ;
+}
+.bg-deepskyblue {
+  background-color:  deepskyblue !important;
+  ;
+}
+.bg-navy {
+  background-color:  #020226 !important;
+  ;
 }

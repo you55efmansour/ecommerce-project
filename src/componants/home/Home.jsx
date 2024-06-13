@@ -10,11 +10,11 @@ function Home() {
             myProducts.map((product , i)=>{
                 return(
                     <Link to={`/Product/${product.id}`} className={`col-lg-6 col-md-6 col-12 p-0`} key={i}>
-                    <div className={`card rounded-0 bg-${product.color} container border-0 justify-content-center align-items-center`}>
+                    <div className={`card rounded-0 h-100 bg-${product.color} container border-0 justify-content-center align-items-center`}>
                         <img src={`${process.env.PUBLIC_URL}${product.img}`} className="card-img w-25 img-fluid" alt="..."/>
                         <div className="overlay d-flex text-light flex-column justify-content-center align-items-center">
                             <h5 className="card-title">{product.title}</h5>
-                            <p className='text-center'>Lorem ipsum, dolor sit amet consectetur adipisicing eli</p>
+                            <p className='text-center'>{product.define}</p>
                         </div>
                     </div>
                     </Link>
@@ -30,7 +30,7 @@ function Home() {
                 </div>
             </div>
             <div className="container h-content mw-100 animate__animated animate__fadeInRight">
-                <div className="row">
+                <div className="row bg-navy">
                     {renderProducts(products)}
                 </div>
             </div>

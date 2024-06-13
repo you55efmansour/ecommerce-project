@@ -32,7 +32,7 @@ function App() {
                     <Pdf/>
               </>
             }/>
-            <Route path="/video/:id/:color" element={
+            <Route path="/video/:id/:color/:i" element={
               <>
                 <Navbar direction={"/product"} showColor = {true} showIcon = {true}/>
                   <Video/>

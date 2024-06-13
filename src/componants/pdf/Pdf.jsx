@@ -60,7 +60,7 @@ function Pdf() {
     
     return (
       <div className={`h-content bg-${color} animate__animated animate__fadeInRight`}>
-          <div id="carouselExampleFade" ref={carouselRef} className="carousel slide h-87 d-flex justify-content-center align-items-center" data-bs-ride="carousel"  data-bs-touch={false}>
+          <div id="carouselExampleFade" ref={carouselRef} className="carousel slide h-87 d-flex justify-content-center align-items-center"  data-bs-touch={false}>
             <div className="carousel-inner pic-container">
               {myProduct(products)}
             </div>
