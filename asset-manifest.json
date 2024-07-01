@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce-project/static/css/main.938ffdf0.css",
-    "main.js": "/ecommerce-project/static/js/main.abe5badd.js",
+    "main.css": "/ecommerce-project/static/css/main.47301512.css",
+    "main.js": "/ecommerce-project/static/js/main.87efac4b.js",
     "static/media/fa-solid-900.ttf": "/ecommerce-project/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/ecommerce-project/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
     "static/media/fa-solid-900.woff2": "/ecommerce-project/static/media/fa-solid-900.b6879d41b0852f01ed5b.woff2",
@@ -12,11 +12,11 @@
     "static/media/fa-v4compatibility.ttf": "/ecommerce-project/static/media/fa-v4compatibility.c6a0c95b0a95c4553700.ttf",
     "static/media/fa-v4compatibility.woff2": "/ecommerce-project/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/ecommerce-project/index.html",
-    "main.938ffdf0.css.map": "/ecommerce-project/static/css/main.938ffdf0.css.map",
-    "main.abe5badd.js.map": "/ecommerce-project/static/js/main.abe5badd.js.map"
+    "main.47301512.css.map": "/ecommerce-project/static/css/main.47301512.css.map",
+    "main.87efac4b.js.map": "/ecommerce-project/static/js/main.87efac4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.938ffdf0.css",
-    "static/js/main.abe5badd.js"
+    "static/css/main.47301512.css",
+    "static/js/main.87efac4b.js"
   ]
 }
